@@ -1,8 +1,74 @@
-[gd_scene load_steps=2 format=3 uid="uid://c00i1ipoa2yme"]
+[gd_scene load_steps=16 format=3 uid="uid://c00i1ipoa2yme"]
+
+[ext_resource type="Script" path="res://Scripts/intro_screen.gd" id="1_cpcwi"]
+[ext_resource type="Texture2D" uid="uid://d2dfo8pe5p2wa" path="res://Sprites/menus/loading-screen/loading1.png" id="1_wc8vv"]
+[ext_resource type="Texture2D" uid="uid://enl678ol6jlp" path="res://Sprites/menus/loading-screen/loading2.png" id="2_8fukm"]
+[ext_resource type="Texture2D" uid="uid://h8sam6ts0hvu" path="res://Sprites/menus/loading-screen/loading3.png" id="3_67ibm"]
+[ext_resource type="Texture2D" uid="uid://81sugd44immw" path="res://Sprites/menus/loading-screen/loading4.png" id="4_6amyn"]
+[ext_resource type="Texture2D" uid="uid://b8r2kkktumtcn" path="res://Sprites/menus/loading-screen/loading5.png" id="5_8b0jv"]
+[ext_resource type="Texture2D" uid="uid://betibaf6o8nn4" path="res://Sprites/menus/loading-screen/loading6.png" id="6_heen0"]
+[ext_resource type="Texture2D" uid="uid://yt178nii4loc" path="res://Sprites/menus/loading-screen/loading7.png" id="7_cr3gc"]
+[ext_resource type="Texture2D" uid="uid://doj562ackw2k0" path="res://Sprites/menus/loading-screen/loading8.png" id="8_5bu1b"]
+[ext_resource type="Texture2D" uid="uid://cl1sxdvopfmo0" path="res://Sprites/menus/loading-screen/loading9.png" id="9_5qec0"]
+[ext_resource type="Texture2D" uid="uid://bx85t23k4y3kf" path="res://Sprites/menus/loading-screen/loading10.png" id="10_mxa2p"]
+[ext_resource type="Texture2D" uid="uid://4gtd54refxlh" path="res://Sprites/menus/loading-screen/loading11.png" id="11_vw763"]
+[ext_resource type="Texture2D" uid="uid://dvhtn0clkgs4d" path="res://Sprites/menus/loading-screen/loading12.png" id="12_0y65i"]
+[ext_resource type="Texture2D" uid="uid://bjc0rymqes5cy" path="res://Sprites/menus/loading-screen/loading13.png" id="13_i584q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_acon8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wc8vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8fukm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_67ibm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6amyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8b0jv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_heen0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cr3gc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5bu1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5qec0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mxa2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vw763")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_0y65i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_i584q")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Intro Screen" type="Node2D"]
+script = ExtResource("1_cpcwi")
 
 [node name="Loading Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(160, 144)
 sprite_frames = SubResource("SpriteFrames_acon8")
+frame = 12
+frame_progress = 1.0
+
+[connection signal="animation_finished" from="Loading Sprite" to="." method="_on_loading_sprite_animation_finished"]
