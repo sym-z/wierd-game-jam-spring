@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c00i1ipoa2yme"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_acon8"]
+
+[node name="Intro Screen" type="Node2D"]
+
+[node name="Loading Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_acon8")
