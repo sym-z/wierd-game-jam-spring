@@ -1,0 +1,110 @@
+[gd_scene load_steps=20 format=3 uid="uid://423an2d4e0m"]
+
+[ext_resource type="Script" path="res://Scripts/level_one_intro.gd" id="1_bo6mj"]
+[ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="1_vav2e"]
+[ext_resource type="Texture2D" uid="uid://b0yk6pph7kvpi" path="res://Sprites/customers/customer1.png" id="2_3pcen"]
+[ext_resource type="Texture2D" uid="uid://b0ngomf4ho5u4" path="res://Sprites/customers/text_boxes/1_greeting/textbox1.png" id="4_pp2su"]
+[ext_resource type="Texture2D" uid="uid://2fyqhlgi0pq5" path="res://Sprites/customers/text_boxes/1_greeting/textbox2.png" id="5_rgplg"]
+[ext_resource type="Texture2D" uid="uid://vkbp5yajnx4o" path="res://Sprites/customers/text_boxes/1_greeting/textbox3.png" id="6_ixka1"]
+[ext_resource type="Texture2D" uid="uid://cwbbxdbtxthwb" path="res://Sprites/customers/text_boxes/1_greeting/textbox4.png" id="7_fbtkt"]
+[ext_resource type="Texture2D" uid="uid://cl8bpbr2vuxfp" path="res://Sprites/customers/text_boxes/1_greeting/textbox5.png" id="8_2pd8b"]
+[ext_resource type="Texture2D" uid="uid://bonpahnuq83vv" path="res://Sprites/customers/text_boxes/1_greeting/textbox6.png" id="9_12et0"]
+[ext_resource type="Texture2D" uid="uid://cqgvaje8gdx3i" path="res://Sprites/customers/text_boxes/1_greeting/textbox7.png" id="10_03e7f"]
+[ext_resource type="Texture2D" uid="uid://1edmn7cltjgp" path="res://Sprites/customers/text_boxes/1_greeting/textbox8.png" id="11_04h11"]
+[ext_resource type="Texture2D" uid="uid://tys4om67hlh1" path="res://Sprites/customers/text_boxes/1_greeting/textbox9.png" id="12_chsyo"]
+[ext_resource type="Texture2D" uid="uid://b83crmpg5lcpc" path="res://Sprites/customers/text_boxes/1_greeting/textbox10.png" id="13_ojyat"]
+[ext_resource type="Texture2D" uid="uid://qa676sy75y78" path="res://Sprites/customers/text_boxes/1_greeting/textbox11.png" id="14_q1ous"]
+[ext_resource type="Texture2D" uid="uid://d3h872ktx03ms" path="res://Sprites/customers/text_boxes/1_greeting/textbox12.png" id="15_obdf3"]
+[ext_resource type="Texture2D" uid="uid://btfuul51ogvf1" path="res://Sprites/customers/text_boxes/1_greeting/textbox13.png" id="16_oxm0u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p6kk5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vav2e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fhatn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3pcen")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0xnsu"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_pp2su")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rgplg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ixka1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fbtkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2pd8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_12et0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_03e7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_04h11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_chsyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ojyat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_q1ous")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_obdf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_oxm0u")
+}],
+"loop": false,
+"name": &"greeting",
+"speed": 45.0
+}]
+
+[node name="Level One Intro" type="Node2D"]
+script = ExtResource("1_bo6mj")
+
+[node name="Window Frame" type="AnimatedSprite2D" parent="."]
+position = Vector2(160, 144)
+sprite_frames = SubResource("SpriteFrames_p6kk5")
+
+[node name="Customer 1" type="AnimatedSprite2D" parent="Window Frame"]
+position = Vector2(0, 20)
+sprite_frames = SubResource("SpriteFrames_fhatn")
+
+[node name="Textbox" type="AnimatedSprite2D" parent="Window Frame/Customer 1"]
+position = Vector2(-1, 91)
+sprite_frames = SubResource("SpriteFrames_0xnsu")
+animation = &"greeting"
+frame = 12
+frame_progress = 1.0
