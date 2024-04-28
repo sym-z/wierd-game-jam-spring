@@ -23,7 +23,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if timer.time_left <= 0.0 and !game_won:
-		print("YOU LOSE")
 		game_lost = true
 	print(timer.time_left)
 	if timer.time_left >= 0.0:
@@ -39,7 +38,6 @@ func _process(delta):
 	
 	if clean_count >= 7:
 		game_won = true
-		print("YOU WIN")
 		timer.stop()
 	clean_count = 0
 	if !brushing and Input.is_action_pressed("Left Click"):
@@ -52,4 +50,3 @@ func _process(delta):
 	timer_icon.position = lerp($"Min Time".position, $"Max Time".position, time_float)
 	if(anger_icon.global_position.y <= $"Max Anger".global_position.y):
 		game_lost = true
-		print("YOU LOSE")
