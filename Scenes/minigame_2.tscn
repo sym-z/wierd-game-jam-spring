@@ -1,0 +1,93 @@
+[gd_scene load_steps=20 format=3 uid="uid://byofo7h7771te"]
+
+[ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="1_akd5u"]
+[ext_resource type="Script" path="res://Scripts/minigame_2.gd" id="1_ejoin"]
+[ext_resource type="Texture2D" uid="uid://dxomq4ngpvmdp" path="res://Sprites/minigame2/main_screen2.png" id="2_u7ibr"]
+[ext_resource type="Texture2D" uid="uid://cgvvxn5txikrg" path="res://Sprites/minigame2/main_screen3.png" id="3_1t7se"]
+[ext_resource type="Texture2D" uid="uid://cv8nam8o65qec" path="res://Sprites/minigame2/main_screen4.png" id="4_3qcvu"]
+[ext_resource type="Texture2D" uid="uid://bwnrgrfkcwkmt" path="res://Sprites/minigame2/main_screen5.png" id="5_fu801"]
+[ext_resource type="Texture2D" uid="uid://vajhdjh423nx" path="res://Sprites/minigame2/main_screen6.png" id="6_06wj1"]
+[ext_resource type="Texture2D" uid="uid://g2box3pqn2fv" path="res://Sprites/minigame2/main_screen7.png" id="7_nvgym"]
+[ext_resource type="Texture2D" uid="uid://cbaxhtufb42hb" path="res://Sprites/minigame2/main_screen8.png" id="8_arwx5"]
+[ext_resource type="Texture2D" uid="uid://dpsepx8u5lkwf" path="res://Sprites/minigame2/main_screen9.png" id="9_ht1yq"]
+[ext_resource type="Texture2D" uid="uid://cldwpkx3gu1s3" path="res://Sprites/minigame2/main_screen10.png" id="10_ximsj"]
+[ext_resource type="Texture2D" uid="uid://buwhfbvfnma27" path="res://Sprites/minigame2/main_screen11.png" id="11_5iomi"]
+[ext_resource type="Texture2D" uid="uid://bogi2dsxuiej4" path="res://Sprites/minigame2/main_screen12.png" id="12_53q81"]
+[ext_resource type="Texture2D" uid="uid://de8fxdy61f817" path="res://Sprites/minigame2/main_screen13.png" id="13_57okl"]
+[ext_resource type="Texture2D" uid="uid://ncykbjsa217l" path="res://Sprites/minigame2/main_screen14.png" id="14_bm2mt"]
+[ext_resource type="Texture2D" uid="uid://csc5ioejld6gu" path="res://Sprites/minigame2/main_screen15.png" id="15_yy2gd"]
+[ext_resource type="Texture2D" uid="uid://bnggxnu0ect4c" path="res://Sprites/minigame2/main_screen16.png" id="16_40lko"]
+[ext_resource type="Texture2D" uid="uid://kh8ic30beamm" path="res://Sprites/minigame2/main_screen17.png" id="17_n47yq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rmiyd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_u7ibr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1t7se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3qcvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fu801")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_06wj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nvgym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_arwx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ht1yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ximsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5iomi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_53q81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_57okl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bm2mt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_yy2gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_40lko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_n47yq")
+}],
+"loop": false,
+"name": &"default",
+"speed": 52.0
+}]
+
+[node name="Minigame 2" type="Node2D"]
+script = ExtResource("1_ejoin")
+
+[node name="Frame" type="Sprite2D" parent="."]
+position = Vector2(160, 144)
+texture = ExtResource("1_akd5u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(160, 162)
+sprite_frames = SubResource("SpriteFrames_rmiyd")
+
+[node name="Pop Time" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Pop Time" to="." method="_on_pop_time_timeout"]

@@ -17,4 +17,5 @@ func _on_brushing_teeth_pressed():
 
 
 func _on_make_breakfast_pressed():
+	get_tree().change_scene_to_file("res://Scenes/minigame_2.tscn");
 	pass # Replace with function body.
