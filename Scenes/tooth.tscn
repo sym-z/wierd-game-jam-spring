@@ -1,0 +1,147 @@
+[gd_scene load_steps=16 format=3 uid="uid://lw27vvo06xbg"]
+
+[ext_resource type="Texture2D" uid="uid://dsfswkkpuagy2" path="res://Sprites/customers/teeth/teeth-cust-1.png" id="1_qjppr"]
+[ext_resource type="Texture2D" uid="uid://d3nti32pawi1g" path="res://Sprites/customers/teeth/teeth-cust-2.png" id="2_ad6yv"]
+[ext_resource type="Texture2D" uid="uid://y4euxug4ywgq" path="res://Sprites/customers/teeth/teeth-cust-3.png" id="3_puntx"]
+[ext_resource type="Texture2D" uid="uid://3of5hiqig714" path="res://Sprites/customers/teeth/teeth-cust-4.png" id="4_d1qxa"]
+[ext_resource type="Texture2D" uid="uid://dfehp78ah7e7t" path="res://Sprites/customers/teeth/teeth-cust-5.png" id="5_jip4h"]
+[ext_resource type="Texture2D" uid="uid://b5ovx1hbn03l1" path="res://Sprites/customers/teeth/teeth-cust-6.png" id="6_av3i1"]
+[ext_resource type="Texture2D" uid="uid://ct5wnow3lhoyc" path="res://Sprites/customers/teeth/teeth-cust-7.png" id="7_3i1rm"]
+[ext_resource type="Texture2D" uid="uid://c3oolxicmji5i" path="res://Sprites/customers/teeth/teeth-cust-8.png" id="8_uiw7h"]
+[ext_resource type="Texture2D" uid="uid://c3hbq3p2esxe6" path="res://Sprites/customers/teeth/teeth-cust-9.png" id="9_ypia2"]
+[ext_resource type="Texture2D" uid="uid://d624cg3bmk1n" path="res://Sprites/customers/teeth/teeth-cust-10.png" id="10_cb463"]
+[ext_resource type="Texture2D" uid="uid://huvwr6vb3iit" path="res://Sprites/customers/teeth/teeth-cust-11.png" id="11_slafw"]
+[ext_resource type="Texture2D" uid="uid://hxmxrqnf4emy" path="res://Sprites/customers/teeth/teeth-cust-12.png" id="12_n5xmt"]
+[ext_resource type="Texture2D" uid="uid://sxbwc38bs3c8" path="res://Sprites/customers/teeth/teeth-cust-13.png" id="13_5wrdn"]
+[ext_resource type="Texture2D" uid="uid://dt7xmjdaf3551" path="res://Sprites/customers/teeth/teeth-cust-14.png" id="14_4xwde"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_furxq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qjppr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ad6yv")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_puntx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d1qxa")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_jip4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_av3i1")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_3i1rm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uiw7h")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_ypia2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cb463")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_slafw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_n5xmt")
+}],
+"loop": true,
+"name": &"6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_5wrdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4xwde")
+}],
+"loop": true,
+"name": &"7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qjppr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ad6yv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_puntx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d1qxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jip4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_av3i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3i1rm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uiw7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ypia2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cb463")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_slafw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_n5xmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5wrdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4xwde")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tooth" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_furxq")
+animation = &"7"
