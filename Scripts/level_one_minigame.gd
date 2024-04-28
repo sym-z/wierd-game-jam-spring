@@ -13,8 +13,8 @@ var game_won : bool = false
 var game_lost : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	anger_icon = $Icon
-	timer_icon = $Icon2
+	anger_icon = $"Anger Icon"
+	timer_icon = $"Time Icon"
 	timer = $Timer
 	total_time = timer.wait_time
 	pass # Replace with function body.
@@ -22,6 +22,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if game_won:
+		print("WIN")
+		get_tree().change_scene_to_file("res://Scenes/brush_win.tscn")
+	elif game_lost:
+		print("LOSS")
+		get_tree().change_scene_to_file("res://Scenes/brush_lose.tscn")
 	if timer.time_left <= 0.0 and !game_won:
 		game_lost = true
 	print(timer.time_left)

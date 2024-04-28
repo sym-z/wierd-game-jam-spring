@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://da5bl5to0744s"]
+[gd_scene load_steps=67 format=3 uid="uid://da5bl5to0744s"]
 
 [ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="1_4xfno"]
 [ext_resource type="Script" path="res://Scripts/level_one_minigame.gd" id="1_nw7f2"]
@@ -17,7 +17,16 @@
 [ext_resource type="Script" path="res://Scripts/tooth5.gd" id="15_s3xqi"]
 [ext_resource type="Script" path="res://Scripts/tooth6.gd" id="16_6baub"]
 [ext_resource type="Script" path="res://Scripts/tooth7.gd" id="17_g4pqh"]
-[ext_resource type="Texture2D" uid="uid://bxl2ivu6nkr5s" path="res://icon.svg" id="18_7my4r"]
+[ext_resource type="Texture2D" uid="uid://buh6cd867u8yf" path="res://Sprites/icons/progress-bar/progress-bar.png" id="18_6sn6f"]
+[ext_resource type="Texture2D" uid="uid://durpvk60o7uw5" path="res://Sprites/icons/anger/anger-icon.png" id="18_o3qk0"]
+[ext_resource type="Texture2D" uid="uid://bm2fb0pamwfqa" path="res://Sprites/icons/clock/clock-icon1.png" id="19_wy8k0"]
+[ext_resource type="Texture2D" uid="uid://b442ktdbgnveo" path="res://Sprites/icons/clock/clock-icon2.png" id="20_offqt"]
+[ext_resource type="Texture2D" uid="uid://7ixn54xrq1ci" path="res://Sprites/icons/clock/clock-icon3.png" id="21_f5vx5"]
+[ext_resource type="Texture2D" uid="uid://cumninoqx37tq" path="res://Sprites/icons/clock/clock-icon4.png" id="22_yo6o0"]
+[ext_resource type="Texture2D" uid="uid://xtbrej6r8xsl" path="res://Sprites/icons/clock/clock-icon5.png" id="23_vkxfh"]
+[ext_resource type="Texture2D" uid="uid://0ymh8p4d62om" path="res://Sprites/icons/clock/clock-icon6.png" id="24_qk7px"]
+[ext_resource type="Texture2D" uid="uid://b57ujicnx85hy" path="res://Sprites/icons/clock/clock-icon7.png" id="25_x6usy"]
+[ext_resource type="Texture2D" uid="uid://dsnu3slff4o4c" path="res://Sprites/icons/clock/clock-icon8.png" id="26_s8wto"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iwrny"]
 animations = [{
@@ -170,6 +179,38 @@ radius = 4.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dux3l"]
 radius = 3.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_252x2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_wy8k0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_offqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_f5vx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_yo6o0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_vkxfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_qk7px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_x6usy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_s8wto")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Level One Minigame" type="Node2D" groups=["Main"]]
 script = ExtResource("1_nw7f2")
@@ -514,27 +555,33 @@ input_pickable = true
 position = Vector2(6, 8)
 shape = SubResource("CircleShape2D_dux3l")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(271, 242)
-scale = Vector2(0.0977207, 0.0974489)
-texture = ExtResource("18_7my4r")
+[node name="Progress Bar" type="Sprite2D" parent="."]
+position = Vector2(274, 191)
+texture = ExtResource("18_6sn6f")
+
+[node name="Progress Bar2" type="Sprite2D" parent="."]
+position = Vector2(297, 191)
+texture = ExtResource("18_6sn6f")
+
+[node name="Anger Icon" type="Sprite2D" parent="."]
+position = Vector2(274, 242)
+texture = ExtResource("18_o3qk0")
 
 [node name="Max Anger" type="Marker2D" parent="."]
-position = Vector2(271, 140)
+position = Vector2(274, 140)
 
 [node name="Min Anger" type="Marker2D" parent="."]
-position = Vector2(270, 242)
+position = Vector2(274, 242)
 
-[node name="Icon2" type="Sprite2D" parent="."]
-position = Vector2(297, 235)
-scale = Vector2(0.136784, 0.19306)
-texture = ExtResource("18_7my4r")
+[node name="Time Icon" type="AnimatedSprite2D" parent="."]
+position = Vector2(297, 242)
+sprite_frames = SubResource("SpriteFrames_252x2")
 
 [node name="Max Time" type="Marker2D" parent="."]
 position = Vector2(297, 242)
 
 [node name="Min Time" type="Marker2D" parent="."]
-position = Vector2(298, 140)
+position = Vector2(297, 140)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 30.0
