@@ -108,3 +108,9 @@ sprite_frames = SubResource("SpriteFrames_0xnsu")
 animation = &"greeting"
 frame = 12
 frame_progress = 1.0
+
+[node name="Hold Time" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="animation_finished" from="Window Frame/Customer 1/Textbox" to="." method="_on_textbox_animation_finished"]
+[connection signal="timeout" from="Hold Time" to="." method="_on_hold_time_timeout"]

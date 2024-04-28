@@ -3,8 +3,6 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$"Window Frame/Customer 1/Textbox".animation = "greeting"
-	$"Window Frame/Customer 1/Textbox".play()
 	pass # Replace with function body.
 
 
@@ -13,11 +11,10 @@ func _process(delta):
 	pass
 
 
-func _on_textbox_animation_finished():
-	$"Hold Time".start()
+func _on_brushing_teeth_pressed():
+	get_tree().change_scene_to_file("res://Scenes/level_one_minigame.tscn");
 	pass # Replace with function body.
 
 
-func _on_hold_time_timeout():
-	get_tree().change_scene_to_file("res://Scenes/minigame_select.tscn")
+func _on_make_breakfast_pressed():
 	pass # Replace with function body.

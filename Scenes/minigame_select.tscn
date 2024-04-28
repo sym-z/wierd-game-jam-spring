@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4c10wjq17a48"]
+
+[ext_resource type="Script" path="res://Scripts/Minigame Select.gd" id="1_8irmb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_glgbe"]
+
+[node name="Minigame Select" type="Node2D"]
+script = ExtResource("1_8irmb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_glgbe")
+
+[node name="Brushing Teeth" type="Button" parent="."]
+offset_left = 28.0
+offset_top = 137.0
+offset_right = 130.0
+offset_bottom = 168.0
+text = "Brush Teeth"
+
+[node name="Make Breakfast" type="Button" parent="."]
+offset_left = 146.0
+offset_top = 45.0
+offset_right = 288.0
+offset_bottom = 76.0
+text = "Make Breakfast"
+
+[connection signal="pressed" from="Brushing Teeth" to="." method="_on_brushing_teeth_pressed"]
+[connection signal="pressed" from="Make Breakfast" to="." method="_on_make_breakfast_pressed"]

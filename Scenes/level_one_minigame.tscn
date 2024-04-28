@@ -1,17 +1,23 @@
-[gd_scene load_steps=26 format=3 uid="uid://da5bl5to0744s"]
+[gd_scene load_steps=57 format=3 uid="uid://da5bl5to0744s"]
 
 [ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="1_4xfno"]
 [ext_resource type="Script" path="res://Scripts/level_one_minigame.gd" id="1_nw7f2"]
 [ext_resource type="Texture2D" uid="uid://dg2muivq2qse" path="res://Sprites/customers/mouth/mouth1.png" id="2_y1j77"]
-[ext_resource type="Texture2D" uid="uid://kt0ojgsfjaj0" path="res://Sprites/customers/mouth/mouth2.png" id="3_l4kab"]
-[ext_resource type="Texture2D" uid="uid://wql46r51slnu" path="res://Sprites/customers/mouth/mouth3.png" id="4_vns2t"]
-[ext_resource type="Texture2D" uid="uid://d4ebkci72eua3" path="res://Sprites/customers/mouth/mouth4.png" id="5_hymdc"]
-[ext_resource type="Texture2D" uid="uid://dtxbodqhs6yj2" path="res://Sprites/customers/mouth/mouth5.png" id="6_70j7y"]
-[ext_resource type="Texture2D" uid="uid://dmhe7bdhl07lg" path="res://Sprites/customers/mouth/mouth6.png" id="7_8ego1"]
-[ext_resource type="Texture2D" uid="uid://cxbxoxbviln1d" path="res://Sprites/customers/mouth/mouth7.png" id="8_l0ud5"]
+[ext_resource type="Texture2D" uid="uid://bwb71nxdg4xd8" path="res://Sprites/customers/mouth/mouthhurt1.png" id="4_wc7ul"]
+[ext_resource type="Texture2D" uid="uid://bh4vd3wp2itla" path="res://Sprites/customers/mouth/mouthhurt2.png" id="5_o6puv"]
+[ext_resource type="Texture2D" uid="uid://br7akefeuskma" path="res://Sprites/customers/mouth/mouthhurt3.png" id="6_lq3oe"]
+[ext_resource type="Texture2D" uid="uid://by1csigmxoa1q" path="res://Sprites/customers/mouth/mouthhurt4.png" id="7_wep4r"]
+[ext_resource type="Texture2D" uid="uid://cbv60vfo66ywm" path="res://Sprites/customers/mouth/mouthhurt5.png" id="8_8ml21"]
+[ext_resource type="Texture2D" uid="uid://dgv0tx0yulwkj" path="res://Sprites/customers/mouth/mouthhurt6.png" id="9_1c4hk"]
 [ext_resource type="PackedScene" uid="uid://lw27vvo06xbg" path="res://Scenes/tooth.tscn" id="9_irj73"]
 [ext_resource type="Script" path="res://Scripts/tooth.gd" id="10_3mjx8"]
 [ext_resource type="Script" path="res://Scripts/tooth2.gd" id="11_gap6b"]
+[ext_resource type="Script" path="res://Scripts/tooth3.gd" id="13_g3oc8"]
+[ext_resource type="Script" path="res://Scripts/tooth4.gd" id="14_orele"]
+[ext_resource type="Script" path="res://Scripts/tooth5.gd" id="15_s3xqi"]
+[ext_resource type="Script" path="res://Scripts/tooth6.gd" id="16_6baub"]
+[ext_resource type="Script" path="res://Scripts/tooth7.gd" id="17_g4pqh"]
+[ext_resource type="Texture2D" uid="uid://bxl2ivu6nkr5s" path="res://icon.svg" id="18_7my4r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iwrny"]
 animations = [{
@@ -29,27 +35,32 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_y1j77")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_l4kab")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_vns2t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_hymdc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_70j7y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_8ego1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_l0ud5")
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_wc7ul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_o6puv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lq3oe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wep4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8ml21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1c4hk")
+}],
+"loop": true,
+"name": &"hurt",
 "speed": 5.0
 }]
 
@@ -85,7 +96,82 @@ radius = 3.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_02cqb"]
 radius = 6.0
 
-[node name="Level One Minigame" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_aso68"]
+radius = 6.08276
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i4dc0"]
+radius = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_57iju"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2q7iu"]
+radius = 3.16228
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t0yhq"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ycseg"]
+radius = 3.60555
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_56hvj"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ik5aj"]
+radius = 6.08276
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ld8id"]
+radius = 4.12311
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yswjw"]
+radius = 2.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l58v8"]
+radius = 5.38516
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r7xvu"]
+radius = 6.08276
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pw8df"]
+radius = 4.12311
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s6et0"]
+radius = 4.24264
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ijvo"]
+radius = 2.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cbeg7"]
+radius = 3.16228
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oln4f"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3bf5f"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6enra"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5iyib"]
+radius = 2.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4x3iv"]
+radius = 3.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y1pr6"]
+radius = 3.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6lhru"]
+radius = 3.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lh2t3"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dux3l"]
+radius = 3.0
+
+[node name="Level One Minigame" type="Node2D" groups=["Main"]]
 script = ExtResource("1_nw7f2")
 
 [node name="Frame" type="AnimatedSprite2D" parent="."]
@@ -98,7 +184,7 @@ sprite_frames = SubResource("SpriteFrames_nr125")
 
 [node name="Teeth" type="Node2D" parent="."]
 
-[node name="Tooth" parent="Teeth" instance=ExtResource("9_irj73")]
+[node name="Tooth" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 position = Vector2(72, 202)
 animation = &"1"
 frame = 1
@@ -146,7 +232,7 @@ input_pickable = true
 position = Vector2(4, -20)
 shape = SubResource("CircleShape2D_ccisr")
 
-[node name="Tooth2" parent="Teeth" instance=ExtResource("9_irj73")]
+[node name="Tooth2" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 position = Vector2(94, 153)
 animation = &"2"
 frame = 1
@@ -194,6 +280,266 @@ input_pickable = true
 position = Vector2(0, -25)
 shape = SubResource("CircleShape2D_02cqb")
 
+[node name="Tooth3" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
+animation = &"3"
+frame = 1
+offset = Vector2(105, 224)
+script = ExtResource("13_g3oc8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Teeth/Tooth3"]
+input_pickable = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teeth/Tooth3/StaticBody2D"]
+polygon = PackedVector2Array(93, 250, 95, 247, 95, 241, 97, 239, 97, 231, 100, 227, 100, 215, 103, 210, 103, 206, 100, 201, 99, 199, 95, 199, 95, 198, 98, 197, 102, 197, 105, 198, 105, 202, 107, 204, 109, 204, 111, 206, 111, 212, 110, 214, 110, 216, 113, 219, 112, 221, 111, 223, 111, 225, 110, 225, 110, 229, 112, 232, 112, 236, 111, 237, 112, 238, 113, 241, 112, 243, 111, 245, 112, 247, 112, 248, 113, 250, 111, 251, 108, 253, 106, 252, 105, 252, 104, 255, 99, 255, 96, 253, 94, 252)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Teeth/Tooth3"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth3/StaticBody2D2"]
+position = Vector2(104, 244)
+shape = SubResource("CircleShape2D_aso68")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Teeth/Tooth3"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth3/StaticBody2D3"]
+position = Vector2(102, 200)
+shape = SubResource("CircleShape2D_i4dc0")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Teeth/Tooth3"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth3/StaticBody2D4"]
+position = Vector2(106, 220)
+shape = SubResource("CircleShape2D_57iju")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Teeth/Tooth3"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth3/StaticBody2D5"]
+position = Vector2(107, 208)
+shape = SubResource("CircleShape2D_2q7iu")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Teeth/Tooth3"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth3/StaticBody2D6"]
+position = Vector2(105, 230)
+shape = SubResource("CircleShape2D_t0yhq")
+
+[node name="Tooth4" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
+position = Vector2(153, 217)
+animation = &"4"
+frame = 1
+script = ExtResource("14_orele")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Teeth/Tooth4"]
+input_pickable = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teeth/Tooth4/StaticBody2D"]
+polygon = PackedVector2Array(2, 36, 0, 34, -1, 31, -2, 28, -2, 24, -2, 17, -7, 13, -7, 8, -5, 1, -6, -5, -7, -9, -9, -11, -18, -14, -18, -17, -15, -21, -15, -25, -14, -27, -14, -28, -16, -31, -21, -33, -20, -39, -18, -39, -17, -37, -11, -36, -11, -31, -11, -27, -9, -26, -9, -21, -4, -16, -3, -12, -1, -10, 3, -8, 4, -4, 4, 0, 3, 2, 5, 5, 9, 7, 14, 13, 14, 16, 13, 18, 19, 25, 19, 31, 18, 37, 14, 39, 10, 38, 9, 37, 6, 36, 4, 37)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Teeth/Tooth4"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth4/StaticBody2D2"]
+position = Vector2(-12, -18)
+shape = SubResource("CircleShape2D_ycseg")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Teeth/Tooth4"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth4/StaticBody2D3"]
+position = Vector2(-1, -4)
+shape = SubResource("CircleShape2D_56hvj")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Teeth/Tooth4"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth4/StaticBody2D4"]
+position = Vector2(4, 13)
+shape = SubResource("CircleShape2D_ik5aj")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Teeth/Tooth4"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth4/StaticBody2D5"]
+position = Vector2(5, 29)
+shape = SubResource("CircleShape2D_ld8id")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Teeth/Tooth4"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth4/StaticBody2D6"]
+position = Vector2(-14, -34)
+shape = SubResource("CircleShape2D_yswjw")
+
+[node name="Tooth5" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
+position = Vector2(147, 128)
+animation = &"5"
+frame = 1
+script = ExtResource("15_s3xqi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Teeth/Tooth5"]
+input_pickable = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teeth/Tooth5/StaticBody2D"]
+polygon = PackedVector2Array(-5, -26, 0, -29, 8, -30, 11, -31, 16, -28, 18, -25, 16, -22, 17, -19, 17, -14, 16, -13, 17, -12, 21, 0, 20, 2, 16, 5, 15, 6, 15, 11, 10, 18, 5, 18, 2, 17, -6, 17, -7, 22, -12, 29, -12, 31, -4, 33, -8, 37, -13, 37, -21, 30, -21, 25, -12, 17, -12, 12, -7, 10, 0, 8, 1, 4, -3, -1, 0, -7, 0, -13, -4, -15)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Teeth/Tooth5"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth5/StaticBody2D2"]
+position = Vector2(6, -22)
+shape = SubResource("CircleShape2D_l58v8")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Teeth/Tooth5"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth5/StaticBody2D3"]
+position = Vector2(9, -7)
+shape = SubResource("CircleShape2D_r7xvu")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Teeth/Tooth5"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth5/StaticBody2D4"]
+position = Vector2(6, 10)
+shape = SubResource("CircleShape2D_pw8df")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Teeth/Tooth5"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth5/StaticBody2D5"]
+position = Vector2(-16, 27)
+shape = SubResource("CircleShape2D_s6et0")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Teeth/Tooth5"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth5/StaticBody2D6"]
+position = Vector2(-8, 14)
+shape = SubResource("CircleShape2D_7ijvo")
+
+[node name="Tooth6" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
+position = Vector2(191, 223)
+animation = &"6"
+frame = 1
+script = ExtResource("16_6baub")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Teeth/Tooth6"]
+input_pickable = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teeth/Tooth6/StaticBody2D"]
+polygon = PackedVector2Array(-3, 26, -3, 23, -4, 22, -4, 19, -1, 18, -1, 12, -1, 11, -1, 5, -3, 1, -3, -5, -5, -9, -5, -12, -15, -12, -19, -10, -19, -12, -17, -16, 0, -14, 4, -9, 6, -2, 12, 2, 14, 5, 13, 11, 12, 16, 13, 20, 14, 23, 14, 28, 11, 34, 6, 35, 1, 34, -1, 32, -2, 28)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Teeth/Tooth6"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth6/StaticBody2D2"]
+position = Vector2(1, 23)
+shape = SubResource("CircleShape2D_cbeg7")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Teeth/Tooth6"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth6/StaticBody2D3"]
+position = Vector2(8, 28)
+shape = SubResource("CircleShape2D_oln4f")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Teeth/Tooth6"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth6/StaticBody2D4"]
+position = Vector2(5, 15)
+shape = SubResource("CircleShape2D_3bf5f")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Teeth/Tooth6"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth6/StaticBody2D5"]
+position = Vector2(5, 6)
+shape = SubResource("CircleShape2D_6enra")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Teeth/Tooth6"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth6/StaticBody2D6"]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_5iyib")
+
+[node name="Tooth7" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
+position = Vector2(187, 152)
+frame = 1
+script = ExtResource("17_g4pqh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Teeth/Tooth7"]
+input_pickable = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teeth/Tooth7/StaticBody2D"]
+polygon = PackedVector2Array(6, -47, 7, -49, 12, -50, 16, -50, 19, -49, 21, -45, 20, -43, 17, -40, 16, -38, 14, -36, 14, -32, 15, -30, 15, -26, 14, -24, 12, -21, 10, -20, 8, -19, 4, -18, 2, -16, 0, -15, 0, -13, 1, -11, 1, -7, 0, -6, -2, -5, -5, -3, -2, -3, -1, -1, -1, 2, 1, 3, 4, 3, 6, 2, 9, 1, 9, 3, 10, 4, 12, 3, 14, 3, 13, 9, 12, 11, 9, 12, 7, 14, 10, 14, 9, 16, 10, 20, 9, 22, 7, 24, 5, 26, 2, 27, 0, 28, -7, 27, -5, 30, 7, 31, 13, 36, 11, 44, 8, 47, 1, 47, 1, 45, 4, 43, 4, 41, -2, 37, -5, 35, -14, 34, -18, 31, -20, 29, -20, 23, -17, 21, -16, 22, -14, 23, -9, 23, -3, 21, 1, 18, -1, 16, -4, 15, -5, 14, -5, 13, -1, 12, 1, 9, 1, 7, -5, 7, -18, 5, -20, -1, -20, -3, -18, -4, -15, -4, -9, -7, -6, -10, -7, -14, -8, -17, -5, -19, -2, -20, 0, -22, 2, -25, 6, -29, 7, -33, 6, -37, 8, -41, 8, -43, 8, -45)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Teeth/Tooth7"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth7/StaticBody2D2"]
+position = Vector2(-12, 1)
+shape = SubResource("CircleShape2D_4x3iv")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Teeth/Tooth7"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth7/StaticBody2D3"]
+position = Vector2(-15, 28)
+shape = SubResource("CircleShape2D_y1pr6")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Teeth/Tooth7"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth7/StaticBody2D4"]
+position = Vector2(5, 19)
+shape = SubResource("CircleShape2D_6lhru")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Teeth/Tooth7"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth7/StaticBody2D5"]
+position = Vector2(9, -25)
+shape = SubResource("CircleShape2D_lh2t3")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Teeth/Tooth7"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth7/StaticBody2D6"]
+position = Vector2(6, 8)
+shape = SubResource("CircleShape2D_dux3l")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(271, 242)
+scale = Vector2(0.0977207, 0.0974489)
+texture = ExtResource("18_7my4r")
+
+[node name="Max Anger" type="Marker2D" parent="."]
+position = Vector2(271, 140)
+
+[node name="Min Anger" type="Marker2D" parent="."]
+position = Vector2(270, 242)
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(297, 235)
+scale = Vector2(0.136784, 0.19306)
+texture = ExtResource("18_7my4r")
+
+[node name="Max Time" type="Marker2D" parent="."]
+position = Vector2(297, 242)
+
+[node name="Min Time" type="Marker2D" parent="."]
+position = Vector2(298, 140)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
 [connection signal="mouse_entered" from="Teeth/Tooth/StaticBody2D" to="Teeth/Tooth" method="_on_static_body_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Teeth/Tooth/StaticBody2D" to="Teeth/Tooth" method="_on_static_body_2d_mouse_exited"]
 [connection signal="mouse_entered" from="Teeth/Tooth/StaticBody2D2" to="Teeth/Tooth" method="_on_static_body_2d_2_mouse_entered"]
@@ -208,3 +554,38 @@ shape = SubResource("CircleShape2D_02cqb")
 [connection signal="mouse_entered" from="Teeth/Tooth2/StaticBody2D4" to="Teeth/Tooth2" method="_on_static_body_2d_4_mouse_entered"]
 [connection signal="mouse_entered" from="Teeth/Tooth2/StaticBody2D5" to="Teeth/Tooth2" method="_on_static_body_2d_5_mouse_entered"]
 [connection signal="mouse_entered" from="Teeth/Tooth2/StaticBody2D6" to="Teeth/Tooth2" method="_on_static_body_2d_6_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth3/StaticBody2D" to="Teeth/Tooth3" method="_on_static_body_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Teeth/Tooth3/StaticBody2D" to="Teeth/Tooth3" method="_on_static_body_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Teeth/Tooth3/StaticBody2D2" to="Teeth/Tooth3" method="_on_static_body_2d_2_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth3/StaticBody2D3" to="Teeth/Tooth3" method="_on_static_body_2d_3_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth3/StaticBody2D4" to="Teeth/Tooth3" method="_on_static_body_2d_4_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth3/StaticBody2D5" to="Teeth/Tooth3" method="_on_static_body_2d_5_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth3/StaticBody2D6" to="Teeth/Tooth3" method="_on_static_body_2d_6_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth4/StaticBody2D" to="Teeth/Tooth4" method="_on_static_body_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Teeth/Tooth4/StaticBody2D" to="Teeth/Tooth4" method="_on_static_body_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Teeth/Tooth4/StaticBody2D2" to="Teeth/Tooth4" method="_on_static_body_2d_2_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth4/StaticBody2D3" to="Teeth/Tooth4" method="_on_static_body_2d_3_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth4/StaticBody2D4" to="Teeth/Tooth4" method="_on_static_body_2d_4_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth4/StaticBody2D5" to="Teeth/Tooth4" method="_on_static_body_2d_5_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth4/StaticBody2D6" to="Teeth/Tooth4" method="_on_static_body_2d_6_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth5/StaticBody2D" to="Teeth/Tooth5" method="_on_static_body_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Teeth/Tooth5/StaticBody2D" to="Teeth/Tooth5" method="_on_static_body_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Teeth/Tooth5/StaticBody2D2" to="Teeth/Tooth5" method="_on_static_body_2d_2_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth5/StaticBody2D3" to="Teeth/Tooth5" method="_on_static_body_2d_3_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth5/StaticBody2D4" to="Teeth/Tooth5" method="_on_static_body_2d_4_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth5/StaticBody2D5" to="Teeth/Tooth5" method="_on_static_body_2d_5_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth5/StaticBody2D6" to="Teeth/Tooth5" method="_on_static_body_2d_6_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth6/StaticBody2D" to="Teeth/Tooth6" method="_on_static_body_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Teeth/Tooth6/StaticBody2D" to="Teeth/Tooth6" method="_on_static_body_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Teeth/Tooth6/StaticBody2D2" to="Teeth/Tooth6" method="_on_static_body_2d_2_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth6/StaticBody2D3" to="Teeth/Tooth6" method="_on_static_body_2d_3_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth6/StaticBody2D4" to="Teeth/Tooth6" method="_on_static_body_2d_4_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth6/StaticBody2D5" to="Teeth/Tooth6" method="_on_static_body_2d_5_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth6/StaticBody2D6" to="Teeth/Tooth6" method="_on_static_body_2d_6_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth7/StaticBody2D" to="Teeth/Tooth7" method="_on_static_body_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Teeth/Tooth7/StaticBody2D" to="Teeth/Tooth7" method="_on_static_body_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Teeth/Tooth7/StaticBody2D2" to="Teeth/Tooth7" method="_on_static_body_2d_2_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth7/StaticBody2D3" to="Teeth/Tooth7" method="_on_static_body_2d_3_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth7/StaticBody2D4" to="Teeth/Tooth7" method="_on_static_body_2d_4_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth7/StaticBody2D5" to="Teeth/Tooth7" method="_on_static_body_2d_5_mouse_entered"]
+[connection signal="mouse_entered" from="Teeth/Tooth7/StaticBody2D6" to="Teeth/Tooth7" method="_on_static_body_2d_6_mouse_entered"]
