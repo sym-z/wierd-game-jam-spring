@@ -1,10 +1,42 @@
-[gd_scene load_steps=6 format=3 uid="uid://d4c10wjq17a48"]
+[gd_scene load_steps=13 format=3 uid="uid://d4c10wjq17a48"]
 
 [ext_resource type="Script" path="res://Scripts/Minigame Select.gd" id="1_8irmb"]
 [ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="2_1w6xy"]
 [ext_resource type="Texture2D" uid="uid://k00045585qha" path="res://Sprites/menus/minigame-select/minigame-select.png" id="3_y2h2h"]
 [ext_resource type="Texture2D" uid="uid://bdjaaxfljfgwd" path="res://Sprites/icons/how-to-play/how-to-play.png" id="4_mdmv4"]
 [ext_resource type="Texture2D" uid="uid://d0twj1oyd1iri" path="res://Sprites/icons/play/play-button.png" id="4_wbgen"]
+[ext_resource type="Texture2D" uid="uid://3pi4wakv7lxw" path="res://Sprites/icons/grades/grades1.png" id="6_jgtyl"]
+[ext_resource type="Texture2D" uid="uid://dcwuees60mtwd" path="res://Sprites/icons/grades/grades2.png" id="7_seja1"]
+[ext_resource type="Texture2D" uid="uid://b72itmpvx7s0e" path="res://Sprites/icons/grades/grades3.png" id="8_82ejd"]
+[ext_resource type="Texture2D" uid="uid://c8cjbn046m23q" path="res://Sprites/icons/grades/grades4.png" id="9_3uwov"]
+[ext_resource type="Texture2D" uid="uid://bktug0xmwm0ng" path="res://Sprites/icons/grades/grades5.png" id="10_1a3ii"]
+[ext_resource type="Texture2D" uid="uid://dn5prlshshrh2" path="res://Sprites/icons/grades/grades6.png" id="11_td38w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ywbx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jgtyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_seja1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_82ejd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3uwov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1a3ii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_td38w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Minigame Select" type="Node2D"]
 script = ExtResource("1_8irmb")
@@ -14,7 +46,7 @@ position = Vector2(160, 144)
 texture = ExtResource("2_1w6xy")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(160, 162)
+position = Vector2(160, 164)
 texture = ExtResource("3_y2h2h")
 
 [node name="Brushing Teeth" type="Button" parent="."]
@@ -49,7 +81,32 @@ offset_bottom = 193.0
 scale = Vector2(0.76, 0.76)
 icon = ExtResource("4_mdmv4")
 
+[node name="Best Brush" type="Label" parent="."]
+offset_left = 77.0
+offset_top = 235.0
+offset_right = 107.0
+offset_bottom = 258.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+
+[node name="Best Eat" type="Label" parent="."]
+offset_left = 77.0
+offset_top = 235.0
+offset_right = 107.0
+offset_bottom = 258.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+
+[node name="Grade" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(228, 247)
+sprite_frames = SubResource("SpriteFrames_5ywbx")
+
+[connection signal="mouse_entered" from="Brushing Teeth" to="." method="_on_brushing_teeth_mouse_entered"]
+[connection signal="mouse_exited" from="Brushing Teeth" to="." method="_on_brushing_teeth_mouse_exited"]
 [connection signal="pressed" from="Brushing Teeth" to="." method="_on_brushing_teeth_pressed"]
 [connection signal="pressed" from="How To" to="." method="_on_how_to_pressed"]
+[connection signal="mouse_entered" from="Make Breakfast" to="." method="_on_make_breakfast_mouse_entered"]
+[connection signal="mouse_exited" from="Make Breakfast" to="." method="_on_make_breakfast_mouse_exited"]
 [connection signal="pressed" from="Make Breakfast" to="." method="_on_make_breakfast_pressed"]
 [connection signal="pressed" from="How To Eat" to="." method="_on_how_to_eat_pressed"]

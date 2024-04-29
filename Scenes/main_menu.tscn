@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://msxd2te1ulky"]
+[gd_scene load_steps=10 format=3 uid="uid://msxd2te1ulky"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_p5ifn"]
+[ext_resource type="Texture2D" uid="uid://db730ms0rmpmj" path="res://Sprites/menus/main-menu/main-menu.png" id="3_3tpmk"]
 [ext_resource type="Texture2D" uid="uid://d0twj1oyd1iri" path="res://Sprites/icons/play/play-button.png" id="3_rsvun"]
 [ext_resource type="Texture2D" uid="uid://c25gkdspud2o5" path="res://Sprites/icons/quit/quit-button.png" id="4_sonpu"]
 [ext_resource type="Texture2D" uid="uid://bdjaaxfljfgwd" path="res://Sprites/icons/how-to-play/how-to-play.png" id="5_myc01"]
@@ -63,12 +64,16 @@ position = Vector2(160, 144)
 sprite_frames = SubResource("SpriteFrames_ouh6p")
 animation = &"base"
 
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(160, 164)
+texture = ExtResource("3_3tpmk")
+
 [node name="Play" type="Button" parent="."]
 layout_mode = 0
-offset_left = 123.0
-offset_top = 136.0
-offset_right = 195.0
-offset_bottom = 176.0
+offset_left = 119.0
+offset_top = 164.0
+offset_right = 191.0
+offset_bottom = 204.0
 theme = SubResource("Theme_eymlt")
 theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 icon = ExtResource("3_rsvun")
@@ -76,27 +81,27 @@ icon_alignment = 1
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 0
-offset_left = 223.0
-offset_top = 198.0
-offset_right = 295.0
-offset_bottom = 238.0
+offset_left = 236.0
+offset_top = 218.0
+offset_right = 308.0
+offset_bottom = 258.0
 icon = ExtResource("4_sonpu")
 
 [node name="How to Play" type="Button" parent="."]
 layout_mode = 0
-offset_left = 122.0
-offset_top = 72.0
-offset_right = 194.0
-offset_bottom = 112.0
+offset_left = 225.0
+offset_top = 165.0
+offset_right = 297.0
+offset_bottom = 205.0
 icon = ExtResource("5_myc01")
 icon_alignment = 1
 
 [node name="Credits" type="Button" parent="."]
 layout_mode = 0
-offset_left = 38.0
-offset_top = 199.0
-offset_right = 110.0
-offset_bottom = 239.0
+offset_left = 16.0
+offset_top = 165.0
+offset_right = 88.0
+offset_bottom = 205.0
 icon = ExtResource("6_qpbmi")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

@@ -17,10 +17,10 @@ position = Vector2(160, 144)
 texture = ExtResource("3_rhpjp")
 
 [node name="Game Select" type="Button" parent="."]
-offset_left = 130.0
-offset_top = 258.0
-offset_right = 202.0
-offset_bottom = 298.0
+offset_left = 129.0
+offset_top = 248.0
+offset_right = 201.0
+offset_bottom = 288.0
 scale = Vector2(0.82, 0.82)
 icon = ExtResource("4_psusf")
 

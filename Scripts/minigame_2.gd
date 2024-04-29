@@ -16,20 +16,22 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	d = delta
+	print(Global.eat_best)
+	d += delta
 	if Input.is_action_just_pressed("Grab Toast"):
 		if can_grab:
 			end_time = d
 			reaction_time = end_time - start_time
 			if Global.eat_best < 0 or reaction_time < Global.eat_best:
 				Global.eat_best = reaction_time
+				
 			print("WIN")
 			
 			get_tree().change_scene_to_file("res://Scenes/brush_win.tscn")
 		else:
 			print("LOSE")
 			get_tree().change_scene_to_file("res://Scenes/brush_lose.tscn")
-	print(can_grab)
+	#print(can_grab)
 
 
 func _on_pop_time_timeout():

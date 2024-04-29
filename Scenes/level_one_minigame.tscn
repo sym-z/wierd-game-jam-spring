@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://da5bl5to0744s"]
+[gd_scene load_steps=69 format=3 uid="uid://da5bl5to0744s"]
 
 [ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="1_4xfno"]
 [ext_resource type="Script" path="res://Scripts/level_one_minigame.gd" id="1_nw7f2"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://b57ujicnx85hy" path="res://Sprites/icons/clock/clock-icon7.png" id="25_x6usy"]
 [ext_resource type="Texture2D" uid="uid://dsnu3slff4o4c" path="res://Sprites/icons/clock/clock-icon8.png" id="26_s8wto"]
 [ext_resource type="Texture2D" uid="uid://o4y2lawqne3u" path="res://Sprites/customers/spots/tooth-spot.png" id="28_ncmwj"]
+[ext_resource type="Texture2D" uid="uid://b4p7j7fhcq44c" path="res://Sprites/icons/tooth_brush_cursor/tooth-brush-cursor.png" id="29_v6go3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iwrny"]
 animations = [{
@@ -728,6 +729,11 @@ position = Vector2(297, 140)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 autostart = true
+
+[node name="Cursor" type="Sprite2D" parent="."]
+position = Vector2(-98, 110)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("29_v6go3")
 
 [connection signal="mouse_entered" from="Teeth/Tooth/StaticBody2D" to="Teeth/Tooth" method="_on_static_body_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Teeth/Tooth/StaticBody2D" to="Teeth/Tooth" method="_on_static_body_2d_mouse_exited"]

@@ -11,8 +11,10 @@ var total_time : float
 var clean_count : int = 0
 var game_won : bool = false
 var game_lost : bool = false
+var d : float = 0.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	anger_icon = $"Anger Icon"
 	timer_icon = $"Time Icon"
 	timer = $Timer
@@ -22,11 +24,17 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	d += delta;
+	$Cursor.position = Vector2(get_viewport().get_mouse_position().x + 10,get_viewport().get_mouse_position().y+10 )
 	if game_won:
 		print("WIN")
+		if Global.brush_best < 0 or d < Global.brush_best:
+			Global.brush_best = d
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().change_scene_to_file("res://Scenes/brush_win.tscn")
 	elif game_lost:
 		print("LOSS")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().change_scene_to_file("res://Scenes/brush_lose.tscn")
 	if timer.time_left <= 0.0 and !game_won:
 		game_lost = true
