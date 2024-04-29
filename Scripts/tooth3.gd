@@ -61,6 +61,7 @@ func _on_static_body_2d_mouse_exited():
 
 func _on_static_body_2d_2_mouse_entered():
 	if brushing and on_tooth:
+		$StaticBody2D2/CollisionShape2D/Sprite2D.visible = false
 		point_arr[0] = 1;
 		#points_touched += 1
 		
@@ -69,6 +70,7 @@ func _on_static_body_2d_2_mouse_entered():
 
 func _on_static_body_2d_3_mouse_entered():
 	if brushing and on_tooth:
+		$StaticBody2D3/CollisionShape2D/Sprite2D.visible = false
 		point_arr[1] = 1;
 		#points_touched += 1
 	pass # Replace with function body.
@@ -76,6 +78,7 @@ func _on_static_body_2d_3_mouse_entered():
 
 func _on_static_body_2d_4_mouse_entered():
 	if brushing and on_tooth:
+		$StaticBody2D4/CollisionShape2D/Sprite2D.visible = false
 		point_arr[2] = 1;
 		#points_touched += 1
 	pass # Replace with function body.
@@ -83,6 +86,7 @@ func _on_static_body_2d_4_mouse_entered():
 
 func _on_static_body_2d_5_mouse_entered():
 	if brushing and on_tooth:
+		$StaticBody2D5/CollisionShape2D/Sprite2D.visible = false
 		point_arr[3] = 1;
 		#points_touched += 1
 	pass # Replace with function body.
@@ -90,6 +94,7 @@ func _on_static_body_2d_5_mouse_entered():
 
 func _on_static_body_2d_6_mouse_entered():
 	if brushing and on_tooth:
+		$StaticBody2D6/CollisionShape2D/Sprite2D.visible = false
 		point_arr[4] = 1;
 		#points_touched += 1
 	pass # Replace with function body.

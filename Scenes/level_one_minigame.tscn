@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://da5bl5to0744s"]
+[gd_scene load_steps=68 format=3 uid="uid://da5bl5to0744s"]
 
 [ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="1_4xfno"]
 [ext_resource type="Script" path="res://Scripts/level_one_minigame.gd" id="1_nw7f2"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://0ymh8p4d62om" path="res://Sprites/icons/clock/clock-icon6.png" id="24_qk7px"]
 [ext_resource type="Texture2D" uid="uid://b57ujicnx85hy" path="res://Sprites/icons/clock/clock-icon7.png" id="25_x6usy"]
 [ext_resource type="Texture2D" uid="uid://dsnu3slff4o4c" path="res://Sprites/icons/clock/clock-icon8.png" id="26_s8wto"]
+[ext_resource type="Texture2D" uid="uid://o4y2lawqne3u" path="res://Sprites/customers/spots/tooth-spot.png" id="28_ncmwj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iwrny"]
 animations = [{
@@ -109,7 +110,7 @@ radius = 6.0
 radius = 6.08276
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i4dc0"]
-radius = 1.0
+radius = 2.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_57iju"]
 radius = 5.0
@@ -245,12 +246,21 @@ input_pickable = true
 position = Vector2(3, 50)
 shape = SubResource("CircleShape2D_avaek")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth/StaticBody2D2/CollisionShape2D"]
+position = Vector2(-2.98023e-07, 2.5034e-06)
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D3" type="StaticBody2D" parent="Teeth/Tooth"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth/StaticBody2D3"]
 position = Vector2(5, 38)
 shape = SubResource("CircleShape2D_eedsr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth/StaticBody2D3/CollisionShape2D"]
+scale = Vector2(1.66667, 1.66667)
+texture = ExtResource("28_ncmwj")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Teeth/Tooth"]
 input_pickable = true
@@ -259,6 +269,11 @@ input_pickable = true
 position = Vector2(6, 21)
 shape = SubResource("CircleShape2D_dmmj4")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth/StaticBody2D4/CollisionShape2D"]
+position = Vector2(1.93715e-06, -6.3777e-06)
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D5" type="StaticBody2D" parent="Teeth/Tooth"]
 input_pickable = true
 
@@ -266,12 +281,21 @@ input_pickable = true
 position = Vector2(8, -5)
 shape = SubResource("CircleShape2D_goar8")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth/StaticBody2D5/CollisionShape2D"]
+position = Vector2(0, -5.1558e-06)
+scale = Vector2(1.66667, 1.66667)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D6" type="StaticBody2D" parent="Teeth/Tooth"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth/StaticBody2D6"]
 position = Vector2(4, -20)
 shape = SubResource("CircleShape2D_ccisr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth/StaticBody2D6/CollisionShape2D"]
+scale = Vector2(1.66667, 1.66667)
+texture = ExtResource("28_ncmwj")
 
 [node name="Tooth2" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 position = Vector2(94, 153)
@@ -292,12 +316,19 @@ input_pickable = true
 position = Vector2(-4, -42)
 shape = SubResource("CircleShape2D_bqi2d")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth2/StaticBody2D2/CollisionShape2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D3" type="StaticBody2D" parent="Teeth/Tooth2"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth2/StaticBody2D3"]
 position = Vector2(17, 20)
 shape = SubResource("CircleShape2D_wj2ua")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth2/StaticBody2D3/CollisionShape2D"]
+texture = ExtResource("28_ncmwj")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Teeth/Tooth2"]
 input_pickable = true
@@ -307,6 +338,11 @@ position = Vector2(5, -1)
 shape = SubResource("CircleShape2D_vpbiu")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth2/StaticBody2D4/CollisionShape2D"]
+position = Vector2(-2.38419e-07, -2.5034e-06)
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D5" type="StaticBody2D" parent="Teeth/Tooth2"]
 input_pickable = true
 
@@ -314,12 +350,19 @@ input_pickable = true
 position = Vector2(8, 14)
 shape = SubResource("CircleShape2D_otphr")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth2/StaticBody2D5/CollisionShape2D"]
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D6" type="StaticBody2D" parent="Teeth/Tooth2"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth2/StaticBody2D6"]
 position = Vector2(0, -25)
 shape = SubResource("CircleShape2D_02cqb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth2/StaticBody2D6/CollisionShape2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("28_ncmwj")
 
 [node name="Tooth3" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 animation = &"3"
@@ -333,6 +376,9 @@ input_pickable = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teeth/Tooth3/StaticBody2D"]
 polygon = PackedVector2Array(93, 250, 95, 247, 95, 241, 97, 239, 97, 231, 100, 227, 100, 215, 103, 210, 103, 206, 100, 201, 99, 199, 95, 199, 95, 198, 98, 197, 102, 197, 105, 198, 105, 202, 107, 204, 109, 204, 111, 206, 111, 212, 110, 214, 110, 216, 113, 219, 112, 221, 111, 223, 111, 225, 110, 225, 110, 229, 112, 232, 112, 236, 111, 237, 112, 238, 113, 241, 112, 243, 111, 245, 112, 247, 112, 248, 113, 250, 111, 251, 108, 253, 106, 252, 105, 252, 104, 255, 99, 255, 96, 253, 94, 252)
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth3/StaticBody2D/CollisionPolygon2D"]
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D2" type="StaticBody2D" parent="Teeth/Tooth3"]
 input_pickable = true
 
@@ -340,12 +386,20 @@ input_pickable = true
 position = Vector2(104, 244)
 shape = SubResource("CircleShape2D_aso68")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth3/StaticBody2D2/CollisionShape2D"]
+scale = Vector2(2, 1.83333)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D3" type="StaticBody2D" parent="Teeth/Tooth3"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth3/StaticBody2D3"]
-position = Vector2(102, 200)
+position = Vector2(103, 200)
 shape = SubResource("CircleShape2D_i4dc0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth3/StaticBody2D3/CollisionShape2D"]
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("28_ncmwj")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Teeth/Tooth3"]
 input_pickable = true
@@ -354,6 +408,10 @@ input_pickable = true
 position = Vector2(106, 220)
 shape = SubResource("CircleShape2D_57iju")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth3/StaticBody2D4/CollisionShape2D"]
+scale = Vector2(1.66667, 1.66667)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D5" type="StaticBody2D" parent="Teeth/Tooth3"]
 input_pickable = true
 
@@ -361,12 +419,19 @@ input_pickable = true
 position = Vector2(107, 208)
 shape = SubResource("CircleShape2D_2q7iu")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth3/StaticBody2D5/CollisionShape2D"]
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D6" type="StaticBody2D" parent="Teeth/Tooth3"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth3/StaticBody2D6"]
 position = Vector2(105, 230)
 shape = SubResource("CircleShape2D_t0yhq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth3/StaticBody2D6/CollisionShape2D"]
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("28_ncmwj")
 
 [node name="Tooth4" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 position = Vector2(153, 217)
@@ -387,12 +452,19 @@ input_pickable = true
 position = Vector2(-12, -18)
 shape = SubResource("CircleShape2D_ycseg")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth4/StaticBody2D2/CollisionShape2D"]
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D3" type="StaticBody2D" parent="Teeth/Tooth4"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth4/StaticBody2D3"]
 position = Vector2(-1, -4)
 shape = SubResource("CircleShape2D_56hvj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth4/StaticBody2D3/CollisionShape2D"]
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("28_ncmwj")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Teeth/Tooth4"]
 input_pickable = true
@@ -401,6 +473,10 @@ input_pickable = true
 position = Vector2(4, 13)
 shape = SubResource("CircleShape2D_ik5aj")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth4/StaticBody2D4/CollisionShape2D"]
+scale = Vector2(2, 1.83333)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D5" type="StaticBody2D" parent="Teeth/Tooth4"]
 input_pickable = true
 
@@ -408,12 +484,21 @@ input_pickable = true
 position = Vector2(5, 29)
 shape = SubResource("CircleShape2D_ld8id")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth4/StaticBody2D5/CollisionShape2D"]
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D6" type="StaticBody2D" parent="Teeth/Tooth4"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth4/StaticBody2D6"]
 position = Vector2(-14, -34)
 shape = SubResource("CircleShape2D_yswjw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth4/StaticBody2D6/CollisionShape2D"]
+position = Vector2(-5.96046e-08, -5.96046e-08)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("28_ncmwj")
 
 [node name="Tooth5" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 position = Vector2(147, 128)
@@ -434,12 +519,20 @@ input_pickable = true
 position = Vector2(6, -22)
 shape = SubResource("CircleShape2D_l58v8")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth5/StaticBody2D2/CollisionShape2D"]
+scale = Vector2(1.66667, 1.66667)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D3" type="StaticBody2D" parent="Teeth/Tooth5"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth5/StaticBody2D3"]
 position = Vector2(9, -7)
 shape = SubResource("CircleShape2D_r7xvu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth5/StaticBody2D3/CollisionShape2D"]
+scale = Vector2(2, 1.83333)
+texture = ExtResource("28_ncmwj")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Teeth/Tooth5"]
 input_pickable = true
@@ -448,6 +541,10 @@ input_pickable = true
 position = Vector2(6, 10)
 shape = SubResource("CircleShape2D_pw8df")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth5/StaticBody2D4/CollisionShape2D"]
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D5" type="StaticBody2D" parent="Teeth/Tooth5"]
 input_pickable = true
 
@@ -455,12 +552,21 @@ input_pickable = true
 position = Vector2(-16, 27)
 shape = SubResource("CircleShape2D_s6et0")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth5/StaticBody2D5/CollisionShape2D"]
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D6" type="StaticBody2D" parent="Teeth/Tooth5"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth5/StaticBody2D6"]
 position = Vector2(-8, 14)
 shape = SubResource("CircleShape2D_7ijvo")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth5/StaticBody2D6/CollisionShape2D"]
+position = Vector2(-5.96046e-08, -5.96046e-08)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("28_ncmwj")
 
 [node name="Tooth6" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 position = Vector2(191, 223)
@@ -481,12 +587,19 @@ input_pickable = true
 position = Vector2(1, 23)
 shape = SubResource("CircleShape2D_cbeg7")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth6/StaticBody2D2/CollisionShape2D"]
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D3" type="StaticBody2D" parent="Teeth/Tooth6"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth6/StaticBody2D3"]
 position = Vector2(8, 28)
 shape = SubResource("CircleShape2D_oln4f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth6/StaticBody2D3/CollisionShape2D"]
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("28_ncmwj")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Teeth/Tooth6"]
 input_pickable = true
@@ -495,6 +608,10 @@ input_pickable = true
 position = Vector2(5, 15)
 shape = SubResource("CircleShape2D_3bf5f")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth6/StaticBody2D4/CollisionShape2D"]
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D5" type="StaticBody2D" parent="Teeth/Tooth6"]
 input_pickable = true
 
@@ -502,12 +619,21 @@ input_pickable = true
 position = Vector2(5, 6)
 shape = SubResource("CircleShape2D_6enra")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth6/StaticBody2D5/CollisionShape2D"]
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D6" type="StaticBody2D" parent="Teeth/Tooth6"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth6/StaticBody2D6"]
 position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_5iyib")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth6/StaticBody2D6/CollisionShape2D"]
+position = Vector2(1.2517e-06, -5.96046e-08)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("28_ncmwj")
 
 [node name="Tooth7" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 position = Vector2(187, 152)
@@ -527,12 +653,18 @@ input_pickable = true
 position = Vector2(-12, 1)
 shape = SubResource("CircleShape2D_4x3iv")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth7/StaticBody2D2/CollisionShape2D"]
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D3" type="StaticBody2D" parent="Teeth/Tooth7"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth7/StaticBody2D3"]
 position = Vector2(-15, 28)
 shape = SubResource("CircleShape2D_y1pr6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth7/StaticBody2D3/CollisionShape2D"]
+texture = ExtResource("28_ncmwj")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Teeth/Tooth7"]
 input_pickable = true
@@ -541,6 +673,9 @@ input_pickable = true
 position = Vector2(5, 19)
 shape = SubResource("CircleShape2D_6lhru")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth7/StaticBody2D4/CollisionShape2D"]
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D5" type="StaticBody2D" parent="Teeth/Tooth7"]
 input_pickable = true
 
@@ -548,12 +683,19 @@ input_pickable = true
 position = Vector2(9, -25)
 shape = SubResource("CircleShape2D_lh2t3")
 
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth7/StaticBody2D5/CollisionShape2D"]
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("28_ncmwj")
+
 [node name="StaticBody2D6" type="StaticBody2D" parent="Teeth/Tooth7"]
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teeth/Tooth7/StaticBody2D6"]
 position = Vector2(6, 8)
 shape = SubResource("CircleShape2D_dux3l")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth7/StaticBody2D6/CollisionShape2D"]
+texture = ExtResource("28_ncmwj")
 
 [node name="Progress Bar" type="Sprite2D" parent="."]
 position = Vector2(274, 191)
@@ -584,7 +726,7 @@ position = Vector2(297, 242)
 position = Vector2(297, 140)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 10.0
 autostart = true
 
 [connection signal="mouse_entered" from="Teeth/Tooth/StaticBody2D" to="Teeth/Tooth" method="_on_static_body_2d_mouse_entered"]

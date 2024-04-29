@@ -1,15 +1,15 @@
 [gd_scene load_steps=14 format=3 uid="uid://msxd2te1ulky"]
 
-[ext_resource type="Texture2D" uid="uid://raixf8oigd2g" path="res://Sprites/menus/window-base-framing/base1.png" id="1_b6smu"]
+[ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="1_b6smu"]
 [ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="1_of563"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_p5ifn"]
-[ext_resource type="Texture2D" uid="uid://dexwh6tbb51bv" path="res://Sprites/menus/window-base-framing/base2.png" id="2_86bm6"]
-[ext_resource type="Texture2D" uid="uid://cf14kiq6viddt" path="res://Sprites/menus/window-base-framing/base3.png" id="3_ouq58"]
-[ext_resource type="Texture2D" uid="uid://cpvdygjckssws" path="res://Sprites/menus/window-base-framing/base4.png" id="4_iuwy7"]
-[ext_resource type="Texture2D" uid="uid://b80311bkdvi1b" path="res://Sprites/menus/window-base-framing/base5.png" id="5_8prla"]
-[ext_resource type="Texture2D" uid="uid://r5m3awhw8kcp" path="res://Sprites/menus/window-base-framing/base6.png" id="6_qnpr3"]
-[ext_resource type="Texture2D" uid="uid://cm441of8fsbyi" path="res://Sprites/menus/window-base-framing/base7.png" id="7_b2yma"]
-[ext_resource type="Texture2D" uid="uid://c6lvbm6v5uvid" path="res://Sprites/menus/window-base-framing/base8.png" id="8_jeu1j"]
+[ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="2_86bm6"]
+[ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="3_ouq58"]
+[ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="4_iuwy7"]
+[ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="5_8prla"]
+[ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="6_qnpr3"]
+[ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="7_b2yma"]
+[ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="8_jeu1j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ouh6p"]
 animations = [{

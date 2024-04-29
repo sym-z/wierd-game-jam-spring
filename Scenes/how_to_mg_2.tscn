@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://whd8etjepua4"]
+
+[ext_resource type="Script" path="res://Scripts/how_to_mg_2.gd" id="1_7jjj3"]
+[ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="1_r3w53"]
+[ext_resource type="Texture2D" uid="uid://bgw0ayvo4jbro" path="res://Sprites/minigame2/how_to/how_to.png" id="2_jxrnn"]
+
+[node name="How To MG 2" type="Node2D"]
+script = ExtResource("1_7jjj3")
+
+[node name="Frame" type="Sprite2D" parent="."]
+position = Vector2(160, 144)
+texture = ExtResource("1_r3w53")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(160, 162)
+texture = ExtResource("2_jxrnn")
+
+[node name="Hold Time" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Hold Time" to="." method="_on_hold_time_timeout"]
