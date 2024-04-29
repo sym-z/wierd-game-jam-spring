@@ -1,0 +1,1 @@
+My submission for the game jam, "Wierd Game Jam, but its Spring". This game was made from 5:00 PM on April 26, 2024 to 5:00 PM April 30, 2024. All art, audio, programming, and game design done by me. Special thanks to GrafxKid for making the "Sweetie 16" color palette that I used for this project. Go check out their palette at: https://lospec.com/palette-list/sweetie-16. 
