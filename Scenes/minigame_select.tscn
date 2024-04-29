@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4c10wjq17a48"]
+[gd_scene load_steps=6 format=3 uid="uid://d4c10wjq17a48"]
 
 [ext_resource type="Script" path="res://Scripts/Minigame Select.gd" id="1_8irmb"]
 [ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="2_1w6xy"]
 [ext_resource type="Texture2D" uid="uid://k00045585qha" path="res://Sprites/menus/minigame-select/minigame-select.png" id="3_y2h2h"]
+[ext_resource type="Texture2D" uid="uid://bdjaaxfljfgwd" path="res://Sprites/icons/how-to-play/how-to-play.png" id="4_mdmv4"]
+[ext_resource type="Texture2D" uid="uid://d0twj1oyd1iri" path="res://Sprites/icons/play/play-button.png" id="4_wbgen"]
 
 [node name="Minigame Select" type="Node2D"]
 script = ExtResource("1_8irmb")
@@ -16,40 +18,38 @@ position = Vector2(160, 162)
 texture = ExtResource("3_y2h2h")
 
 [node name="Brushing Teeth" type="Button" parent="."]
-offset_left = 40.0
-offset_top = 89.0
-offset_right = 81.0
-offset_bottom = 120.0
-scale = Vector2(0.635, 0.635)
-text = "Play"
+offset_left = 35.0
+offset_top = 170.0
+offset_right = 107.0
+offset_bottom = 210.0
+scale = Vector2(0.6, 0.6)
+icon = ExtResource("4_wbgen")
 
-[node name="How To" type="Button" parent="Brushing Teeth"]
-layout_mode = 0
-offset_left = -1.5748
-offset_top = 116.535
-offset_right = 98.4252
-offset_bottom = 147.535
-scale = Vector2(0.7, 0.7)
-text = "How to Play"
+[node name="How To" type="Button" parent="."]
+offset_left = 85.0
+offset_top = 170.0
+offset_right = 157.0
+offset_bottom = 210.0
+scale = Vector2(0.595, 0.595)
+icon = ExtResource("4_mdmv4")
 
 [node name="Make Breakfast" type="Button" parent="."]
-offset_left = 170.0
-offset_top = 144.0
-offset_right = 211.0
-offset_bottom = 175.0
-scale = Vector2(0.395, 0.395)
-text = "Play"
+offset_left = 160.0
+offset_top = 153.0
+offset_right = 232.0
+offset_bottom = 193.0
+scale = Vector2(0.765, 0.765)
+icon = ExtResource("4_wbgen")
 
-[node name="How To Eat" type="Button" parent="Make Breakfast"]
-layout_mode = 0
-offset_left = 200.0
-offset_top = 10.1266
-offset_right = 300.0
-offset_bottom = 41.1266
-scale = Vector2(0.83, 0.83)
-text = "How to Play"
+[node name="How To Eat" type="Button" parent="."]
+offset_left = 232.0
+offset_top = 153.0
+offset_right = 304.0
+offset_bottom = 193.0
+scale = Vector2(0.76, 0.76)
+icon = ExtResource("4_mdmv4")
 
 [connection signal="pressed" from="Brushing Teeth" to="." method="_on_brushing_teeth_pressed"]
-[connection signal="pressed" from="Brushing Teeth/How To" to="." method="_on_how_to_pressed"]
+[connection signal="pressed" from="How To" to="." method="_on_how_to_pressed"]
 [connection signal="pressed" from="Make Breakfast" to="." method="_on_make_breakfast_pressed"]
-[connection signal="pressed" from="Make Breakfast/How To Eat" to="." method="_on_how_to_eat_pressed"]
+[connection signal="pressed" from="How To Eat" to="." method="_on_how_to_eat_pressed"]
