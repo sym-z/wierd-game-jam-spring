@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhtn343dvvl5k"]
+[gd_scene load_steps=3 format=3 uid="uid://dhtn343dvvl5k"]
 
 [ext_resource type="Script" path="res://Scripts/credits.gd" id="1_yxumf"]
+[ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="2_ammyl"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -18,5 +19,19 @@ offset_top = 109.0
 offset_right = 230.0
 offset_bottom = 140.0
 text = "Back to Main Menu"
+
+[node name="Frame" type="Sprite2D" parent="."]
+position = Vector2(160, 144)
+texture = ExtResource("2_ammyl")
+
+[node name="Background" type="Sprite2D" parent="."]
+
+[node name="Hidden Quit" type="Button" parent="."]
+offset_left = 281.0
+offset_top = 6.0
+offset_right = 295.0
+offset_bottom = 19.0
+scale = Vector2(2.30297, 2.37471)
+flat = true
 
 [connection signal="pressed" from="Main Menu" to="." method="_on_main_menu_pressed"]

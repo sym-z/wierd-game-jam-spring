@@ -104,6 +104,14 @@ offset_right = 88.0
 offset_bottom = 205.0
 icon = ExtResource("6_qpbmi")
 
+[node name="Hidden Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 6.0
+offset_right = 312.0
+offset_bottom = 37.0
+flat = true
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="How to Play" to="." method="_on_how_to_play_pressed"]
