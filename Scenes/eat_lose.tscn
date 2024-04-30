@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://6dacudojdll5"]
+[gd_scene load_steps=6 format=3 uid="uid://6dacudojdll5"]
 
 [ext_resource type="Script" path="res://Scripts/eat_lose.gd" id="1_33hjv"]
 [ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="2_darf5"]
 [ext_resource type="Texture2D" uid="uid://c8bhmsdr3mmhw" path="res://Sprites/minigame2/lose/mg2-lose.png" id="3_0i7vf"]
 [ext_resource type="Texture2D" uid="uid://66xxx0btuli6" path="res://Sprites/icons/back_button/back-button.png" id="4_k68sg"]
+[ext_resource type="AudioStream" uid="uid://ofsunlrx2md3" path="res://Audio/food-fail.mp3" id="5_6dgi5"]
 
 [node name="Eat Lose" type="Node2D"]
 script = ExtResource("1_33hjv")
@@ -30,6 +31,9 @@ offset_top = 6.0
 offset_right = 312.0
 offset_bottom = 37.0
 flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_6dgi5")
 
 [connection signal="pressed" from="Minigame Select" to="." method="_on_minigame_select_pressed"]
 [connection signal="pressed" from="Hidden Quit" to="." method="_on_hidden_quit_pressed"]

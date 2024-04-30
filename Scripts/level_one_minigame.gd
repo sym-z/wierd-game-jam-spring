@@ -27,13 +27,13 @@ func _process(delta):
 	d += delta;
 	$Cursor.position = Vector2(get_viewport().get_mouse_position().x + 10,get_viewport().get_mouse_position().y+10 )
 	if game_won:
-		print("WIN")
+		#print("WIN")
 		if Global.brush_best < 0 or d < Global.brush_best:
 			Global.brush_best = d
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().change_scene_to_file("res://Scenes/brush_win.tscn")
 	elif game_lost:
-		print("LOSS")
+		#print("LOSS")
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().change_scene_to_file("res://Scenes/brush_lose.tscn")
 	if timer.time_left <= 0.02 and !game_won:
@@ -55,6 +55,7 @@ func _process(delta):
 		timer.stop()
 	clean_count = 0
 	if !brushing and Input.is_action_pressed("Left Click"):
+		$"Tooth Hurt".play()
 		total_anger += 0.7 * delta
 		$Background.animation = "hurt"
 	else:
@@ -73,8 +74,8 @@ func _process(delta):
 		$Background.frame = 1
 	else:
 		$Background.frame = 0
-	print(total_anger)
-	print(time_float)
+	#print(total_anger)
+	#print(time_float)
 
 
 func _on_hidden_quit_pressed():

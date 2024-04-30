@@ -1,7 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhtn343dvvl5k"]
+[gd_scene load_steps=6 format=3 uid="uid://dhtn343dvvl5k"]
 
 [ext_resource type="Script" path="res://Scripts/credits.gd" id="1_yxumf"]
 [ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="2_ammyl"]
+[ext_resource type="Texture2D" uid="uid://fpq5cbw0bn0o" path="res://Sprites/menus/credits/credits1.png" id="3_2y3h2"]
+[ext_resource type="Texture2D" uid="uid://bxklqd2qxlki3" path="res://Sprites/menus/credits/credits2.png" id="4_rf7o0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u2d1g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2y3h2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rf7o0")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.25
+}]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -24,9 +40,12 @@ text = "Back to Main Menu"
 position = Vector2(160, 144)
 texture = ExtResource("2_ammyl")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="AnimatedSprite2D" parent="."]
+position = Vector2(160, 164)
+sprite_frames = SubResource("SpriteFrames_u2d1g")
 
 [node name="Hidden Quit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 281.0
 offset_top = 6.0
 offset_right = 295.0

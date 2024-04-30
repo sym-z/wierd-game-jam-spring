@@ -11,11 +11,12 @@ var point_arr = []
 var full_arr = []
 var anger : float = 0.0
 var time_added : bool = false
+var sound_played : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for i in range(MAX_POINTS):
 		full_arr.push_back(1);
-	total_points = get_children().size()
+	total_points = get_children().size() -2
 	for i in range(total_points):
 		var bucket : int = 0
 		point_arr.push_back(bucket)
@@ -25,10 +26,15 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#print(point_arr)
 	if point_arr == full_arr:
 		clean = true
 	if clean:
+		if !sound_played:
+			$"Tooth Clean".play()
+			sound_played = true
 		$".".frame = 0
+		
 		var main_timer = get_tree().get_first_node_in_group("Main").timer
 		if !time_added:
 			main_timer.start(main_timer.time_left + 3.0)
@@ -61,6 +67,8 @@ func _on_static_body_2d_mouse_exited():
 
 func _on_static_body_2d_2_mouse_entered():
 	if brushing and on_tooth:
+		if $StaticBody2D2/CollisionShape2D/Sprite2D.visible:
+			$"Spot Clean".play()
 		$StaticBody2D2/CollisionShape2D/Sprite2D.visible = false
 		point_arr[0] = 1;
 		#points_touched += 1
@@ -70,6 +78,8 @@ func _on_static_body_2d_2_mouse_entered():
 
 func _on_static_body_2d_3_mouse_entered():
 	if brushing and on_tooth:
+		if $StaticBody2D3/CollisionShape2D/Sprite2D.visible:
+			$"Spot Clean".play()
 		$StaticBody2D3/CollisionShape2D/Sprite2D.visible = false
 		point_arr[1] = 1;
 		#points_touched += 1
@@ -78,6 +88,8 @@ func _on_static_body_2d_3_mouse_entered():
 
 func _on_static_body_2d_4_mouse_entered():
 	if brushing and on_tooth:
+		if $StaticBody2D4/CollisionShape2D/Sprite2D.visible:
+			$"Spot Clean".play()
 		$StaticBody2D4/CollisionShape2D/Sprite2D.visible = false
 		point_arr[2] = 1;
 		#points_touched += 1
@@ -86,6 +98,8 @@ func _on_static_body_2d_4_mouse_entered():
 
 func _on_static_body_2d_5_mouse_entered():
 	if brushing and on_tooth:
+		if $StaticBody2D5/CollisionShape2D/Sprite2D.visible:
+			$"Spot Clean".play()
 		$StaticBody2D5/CollisionShape2D/Sprite2D.visible = false
 		point_arr[3] = 1;
 		#points_touched += 1
@@ -94,6 +108,8 @@ func _on_static_body_2d_5_mouse_entered():
 
 func _on_static_body_2d_6_mouse_entered():
 	if brushing and on_tooth:
+		if $StaticBody2D6/CollisionShape2D/Sprite2D.visible:
+			$"Spot Clean".play()
 		$StaticBody2D6/CollisionShape2D/Sprite2D.visible = false
 		point_arr[4] = 1;
 		#points_touched += 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://da5bl5to0744s"]
+[gd_scene load_steps=75 format=3 uid="uid://da5bl5to0744s"]
 
 [ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="1_4xfno"]
 [ext_resource type="Script" path="res://Scripts/level_one_minigame.gd" id="1_nw7f2"]
@@ -19,6 +19,8 @@
 [ext_resource type="Script" path="res://Scripts/tooth4.gd" id="14_orele"]
 [ext_resource type="Script" path="res://Scripts/tooth5.gd" id="15_s3xqi"]
 [ext_resource type="Script" path="res://Scripts/tooth6.gd" id="16_6baub"]
+[ext_resource type="AudioStream" uid="uid://eu8ow12xkvd1" path="res://Audio/tooth-clean.mp3" id="16_iyorx"]
+[ext_resource type="AudioStream" uid="uid://cklq1x2ecs8vv" path="res://Audio/spot-clean.mp3" id="17_a7s64"]
 [ext_resource type="Script" path="res://Scripts/tooth7.gd" id="17_g4pqh"]
 [ext_resource type="Texture2D" uid="uid://buh6cd867u8yf" path="res://Sprites/icons/progress-bar/progress-bar.png" id="18_6sn6f"]
 [ext_resource type="Texture2D" uid="uid://durpvk60o7uw5" path="res://Sprites/icons/anger/anger-icon.png" id="18_o3qk0"]
@@ -32,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://dsnu3slff4o4c" path="res://Sprites/icons/clock/clock-icon8.png" id="26_s8wto"]
 [ext_resource type="Texture2D" uid="uid://o4y2lawqne3u" path="res://Sprites/customers/spots/tooth-spot.png" id="28_ncmwj"]
 [ext_resource type="Texture2D" uid="uid://b4p7j7fhcq44c" path="res://Sprites/icons/tooth_brush_cursor/tooth-brush-cursor.png" id="29_v6go3"]
+[ext_resource type="AudioStream" uid="uid://71lm8uyvdnw7" path="res://Audio/tooth-hurt.mp3" id="35_1v8wi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iwrny"]
 animations = [{
@@ -310,6 +313,12 @@ shape = SubResource("CircleShape2D_ccisr")
 scale = Vector2(1.66667, 1.66667)
 texture = ExtResource("28_ncmwj")
 
+[node name="Tooth Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth"]
+stream = ExtResource("16_iyorx")
+
+[node name="Spot Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth"]
+stream = ExtResource("17_a7s64")
+
 [node name="Tooth2" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 position = Vector2(94, 153)
 animation = &"2"
@@ -377,6 +386,12 @@ shape = SubResource("CircleShape2D_02cqb")
 scale = Vector2(2, 2)
 texture = ExtResource("28_ncmwj")
 
+[node name="Tooth Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth2"]
+stream = ExtResource("16_iyorx")
+
+[node name="Spot Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth2"]
+stream = ExtResource("17_a7s64")
+
 [node name="Tooth3" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 animation = &"3"
 frame = 1
@@ -442,6 +457,12 @@ shape = SubResource("CircleShape2D_t0yhq")
 [node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth3/StaticBody2D6/CollisionShape2D"]
 scale = Vector2(1.33333, 1.33333)
 texture = ExtResource("28_ncmwj")
+
+[node name="Tooth Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth3"]
+stream = ExtResource("16_iyorx")
+
+[node name="Spot Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth3"]
+stream = ExtResource("17_a7s64")
 
 [node name="Tooth4" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 position = Vector2(153, 217)
@@ -509,6 +530,12 @@ shape = SubResource("CircleShape2D_yswjw")
 position = Vector2(-5.96046e-08, -5.96046e-08)
 scale = Vector2(0.666667, 0.666667)
 texture = ExtResource("28_ncmwj")
+
+[node name="Tooth Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth4"]
+stream = ExtResource("16_iyorx")
+
+[node name="Spot Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth4"]
+stream = ExtResource("17_a7s64")
 
 [node name="Tooth5" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 position = Vector2(147, 128)
@@ -578,6 +605,12 @@ position = Vector2(-5.96046e-08, -5.96046e-08)
 scale = Vector2(0.666667, 0.666667)
 texture = ExtResource("28_ncmwj")
 
+[node name="Tooth Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth5"]
+stream = ExtResource("16_iyorx")
+
+[node name="Spot Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth5"]
+stream = ExtResource("17_a7s64")
+
 [node name="Tooth6" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 position = Vector2(191, 223)
 animation = &"6"
@@ -645,6 +678,12 @@ position = Vector2(1.2517e-06, -5.96046e-08)
 scale = Vector2(0.666667, 0.666667)
 texture = ExtResource("28_ncmwj")
 
+[node name="Tooth Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth6"]
+stream = ExtResource("16_iyorx")
+
+[node name="Spot Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth6"]
+stream = ExtResource("17_a7s64")
+
 [node name="Tooth7" parent="Teeth" groups=["Tooth"] instance=ExtResource("9_irj73")]
 position = Vector2(187, 152)
 frame = 1
@@ -707,6 +746,12 @@ shape = SubResource("CircleShape2D_dux3l")
 [node name="Sprite2D" type="Sprite2D" parent="Teeth/Tooth7/StaticBody2D6/CollisionShape2D"]
 texture = ExtResource("28_ncmwj")
 
+[node name="Tooth Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth7"]
+stream = ExtResource("16_iyorx")
+
+[node name="Spot Clean" type="AudioStreamPlayer2D" parent="Teeth/Tooth7"]
+stream = ExtResource("17_a7s64")
+
 [node name="Progress Bar" type="Sprite2D" parent="."]
 position = Vector2(274, 191)
 texture = ExtResource("18_6sn6f")
@@ -750,6 +795,9 @@ offset_top = 6.0
 offset_right = 312.0
 offset_bottom = 37.0
 flat = true
+
+[node name="Tooth Hurt" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("35_1v8wi")
 
 [connection signal="mouse_entered" from="Teeth/Tooth/StaticBody2D" to="Teeth/Tooth" method="_on_static_body_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Teeth/Tooth/StaticBody2D" to="Teeth/Tooth" method="_on_static_body_2d_mouse_exited"]
