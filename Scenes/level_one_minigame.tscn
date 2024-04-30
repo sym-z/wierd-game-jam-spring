@@ -788,3 +788,4 @@ flat = true
 [connection signal="mouse_entered" from="Teeth/Tooth7/StaticBody2D4" to="Teeth/Tooth7" method="_on_static_body_2d_4_mouse_entered"]
 [connection signal="mouse_entered" from="Teeth/Tooth7/StaticBody2D5" to="Teeth/Tooth7" method="_on_static_body_2d_5_mouse_entered"]
 [connection signal="mouse_entered" from="Teeth/Tooth7/StaticBody2D6" to="Teeth/Tooth7" method="_on_static_body_2d_6_mouse_entered"]
+[connection signal="pressed" from="Hidden Quit" to="." method="_on_hidden_quit_pressed"]

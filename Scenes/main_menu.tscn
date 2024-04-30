@@ -116,3 +116,4 @@ flat = true
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="How to Play" to="." method="_on_how_to_play_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Hidden Quit" to="." method="_on_hidden_quit_pressed"]

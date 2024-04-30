@@ -121,3 +121,4 @@ flat = true
 
 [connection signal="animation_finished" from="Window Frame/Customer 1/Textbox" to="." method="_on_textbox_animation_finished"]
 [connection signal="timeout" from="Hold Time" to="." method="_on_hold_time_timeout"]
+[connection signal="pressed" from="Hidden Quit" to="." method="_on_hidden_quit_pressed"]

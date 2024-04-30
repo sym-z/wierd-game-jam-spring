@@ -25,3 +25,8 @@ func _on_how_to_play_pressed():
 func _on_credits_pressed():
 	get_tree().change_scene_to_file("res://Scenes/credits.tscn")
 	pass # Replace with function body.
+
+
+func _on_hidden_quit_pressed():
+	get_tree().quit()
+	pass # Replace with function body.

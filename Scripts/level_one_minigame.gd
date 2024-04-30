@@ -64,3 +64,8 @@ func _process(delta):
 	timer_icon.position = lerp($"Min Time".position, $"Max Time".position, time_float)
 	if(anger_icon.global_position.y <= $"Max Anger".global_position.y):
 		game_lost = true
+
+
+func _on_hidden_quit_pressed():
+	get_tree().quit()
+	pass # Replace with function body.

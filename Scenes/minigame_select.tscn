@@ -117,3 +117,4 @@ flat = true
 [connection signal="mouse_exited" from="Make Breakfast" to="." method="_on_make_breakfast_mouse_exited"]
 [connection signal="pressed" from="Make Breakfast" to="." method="_on_make_breakfast_pressed"]
 [connection signal="pressed" from="How To Eat" to="." method="_on_how_to_eat_pressed"]
+[connection signal="pressed" from="Hidden Quit" to="." method="_on_hidden_quit_pressed"]

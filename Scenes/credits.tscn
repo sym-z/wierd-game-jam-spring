@@ -35,3 +35,4 @@ scale = Vector2(2.30297, 2.37471)
 flat = true
 
 [connection signal="pressed" from="Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Hidden Quit" to="." method="_on_hidden_quit_pressed"]

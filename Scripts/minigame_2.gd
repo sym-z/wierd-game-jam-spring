@@ -46,3 +46,8 @@ func _on_animated_sprite_2d_animation_finished():
 	print("LOSE")
 	get_tree().change_scene_to_file("res://Scenes/brush_lose.tscn")
 	pass # Replace with function body.
+
+
+func _on_hidden_quit_pressed():
+	get_tree().quit()
+	pass # Replace with function body.

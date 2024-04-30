@@ -93,3 +93,8 @@ func _on_make_breakfast_mouse_exited():
 	$"Best Eat".visible = false
 	$Grade.visible = false
 	pass # Replace with function body.
+
+
+func _on_hidden_quit_pressed():
+	get_tree().quit()
+	pass # Replace with function body.
