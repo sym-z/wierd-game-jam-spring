@@ -61,6 +61,8 @@ func _process(delta):
 	else:
 		$Background.animation = "default"
 	$Background.play()
+	if time_float > 1:
+		time_float = 1
 	anger_icon.position = lerp($"Min Anger".position, $"Max Anger".position, total_anger)
 	timer_icon.position = lerp($"Min Time".position, $"Max Time".position, time_float)
 	if(anger_icon.global_position.y <= $"Max Anger".global_position.y):
