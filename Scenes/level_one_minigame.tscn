@@ -1,10 +1,13 @@
-[gd_scene load_steps=69 format=3 uid="uid://da5bl5to0744s"]
+[gd_scene load_steps=72 format=3 uid="uid://da5bl5to0744s"]
 
 [ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="1_4xfno"]
 [ext_resource type="Script" path="res://Scripts/level_one_minigame.gd" id="1_nw7f2"]
 [ext_resource type="Texture2D" uid="uid://dg2muivq2qse" path="res://Sprites/customers/mouth/mouth1.png" id="2_y1j77"]
 [ext_resource type="Texture2D" uid="uid://bwb71nxdg4xd8" path="res://Sprites/customers/mouth/mouthhurt1.png" id="4_wc7ul"]
+[ext_resource type="Texture2D" uid="uid://kt0ojgsfjaj0" path="res://Sprites/customers/mouth/mouth2.png" id="4_wn6g3"]
+[ext_resource type="Texture2D" uid="uid://wql46r51slnu" path="res://Sprites/customers/mouth/mouth3.png" id="5_6vt43"]
 [ext_resource type="Texture2D" uid="uid://bh4vd3wp2itla" path="res://Sprites/customers/mouth/mouthhurt2.png" id="5_o6puv"]
+[ext_resource type="Texture2D" uid="uid://d4ebkci72eua3" path="res://Sprites/customers/mouth/mouth4.png" id="6_drxwu"]
 [ext_resource type="Texture2D" uid="uid://br7akefeuskma" path="res://Sprites/customers/mouth/mouthhurt3.png" id="6_lq3oe"]
 [ext_resource type="Texture2D" uid="uid://by1csigmxoa1q" path="res://Sprites/customers/mouth/mouthhurt4.png" id="7_wep4r"]
 [ext_resource type="Texture2D" uid="uid://cbv60vfo66ywm" path="res://Sprites/customers/mouth/mouthhurt5.png" id="8_8ml21"]
@@ -46,10 +49,19 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_y1j77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wn6g3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6vt43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_drxwu")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 0.0
 }, {
 "frames": [{
 "duration": 1.0,

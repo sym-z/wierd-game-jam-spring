@@ -27,10 +27,10 @@ func _process(delta):
 				
 			print("WIN")
 			
-			get_tree().change_scene_to_file("res://Scenes/brush_win.tscn")
+			get_tree().change_scene_to_file("res://Scenes/eat_win.tscn")
 		else:
 			print("LOSE")
-			get_tree().change_scene_to_file("res://Scenes/brush_lose.tscn")
+			get_tree().change_scene_to_file("res://Scenes/eat_lose.tscn")
 	#print(can_grab)
 
 
@@ -44,7 +44,7 @@ func _on_pop_time_timeout():
 func _on_animated_sprite_2d_animation_finished():
 	can_grab = false
 	print("LOSE")
-	get_tree().change_scene_to_file("res://Scenes/brush_lose.tscn")
+	get_tree().change_scene_to_file("res://Scenes/eat_lose.tscn")
 	pass # Replace with function body.
 
 

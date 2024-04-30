@@ -36,9 +36,9 @@ func _process(delta):
 		print("LOSS")
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().change_scene_to_file("res://Scenes/brush_lose.tscn")
-	if timer.time_left <= 0.0 and !game_won:
+	if timer.time_left <= 0.02 and !game_won:
 		game_lost = true
-	print(timer.time_left)
+	#print(timer.time_left)
 	if timer.time_left >= 0.0:
 		time_float = timer.time_left/total_time
 	for tooth in $Teeth.get_children():
@@ -64,6 +64,17 @@ func _process(delta):
 	timer_icon.position = lerp($"Min Time".position, $"Max Time".position, time_float)
 	if(anger_icon.global_position.y <= $"Max Anger".global_position.y):
 		game_lost = true
+		
+	if time_float <= 0.25 or total_anger >= 0.75:
+		$Background.frame = 3
+	elif time_float <= 0.5 or total_anger >= 0.5:
+		$Background.frame = 2
+	elif time_float <= 0.75 or total_anger >= 0.25:
+		$Background.frame = 1
+	else:
+		$Background.frame = 0
+	print(total_anger)
+	print(time_float)
 
 
 func _on_hidden_quit_pressed():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d4c10wjq17a48"]
+[gd_scene load_steps=14 format=3 uid="uid://d4c10wjq17a48"]
 
 [ext_resource type="Script" path="res://Scripts/Minigame Select.gd" id="1_8irmb"]
 [ext_resource type="Texture2D" uid="uid://cdqn6sr4qw4lb" path="res://Sprites/menus/window-base-framing/base.png" id="2_1w6xy"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c8cjbn046m23q" path="res://Sprites/icons/grades/grades4.png" id="9_3uwov"]
 [ext_resource type="Texture2D" uid="uid://bktug0xmwm0ng" path="res://Sprites/icons/grades/grades5.png" id="10_1a3ii"]
 [ext_resource type="Texture2D" uid="uid://dn5prlshshrh2" path="res://Sprites/icons/grades/grades6.png" id="11_td38w"]
+[ext_resource type="Texture2D" uid="uid://66xxx0btuli6" path="res://Sprites/icons/back_button/back-button.png" id="12_7a6cg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5ywbx"]
 animations = [{
@@ -50,19 +51,19 @@ position = Vector2(160, 164)
 texture = ExtResource("3_y2h2h")
 
 [node name="Brushing Teeth" type="Button" parent="."]
-offset_left = 35.0
-offset_top = 170.0
-offset_right = 107.0
-offset_bottom = 210.0
-scale = Vector2(0.6, 0.6)
+offset_left = 26.0
+offset_top = 171.0
+offset_right = 98.0
+offset_bottom = 211.0
+scale = Vector2(0.67, 0.67)
 icon = ExtResource("4_wbgen")
 
 [node name="How To" type="Button" parent="."]
-offset_left = 85.0
-offset_top = 170.0
-offset_right = 157.0
-offset_bottom = 210.0
-scale = Vector2(0.595, 0.595)
+offset_left = 86.0
+offset_top = 171.0
+offset_right = 158.0
+offset_bottom = 211.0
+scale = Vector2(0.67, 0.67)
 icon = ExtResource("4_mdmv4")
 
 [node name="Make Breakfast" type="Button" parent="."]
@@ -108,6 +109,14 @@ offset_top = 6.0
 offset_right = 312.0
 offset_bottom = 37.0
 flat = true
+
+[node name="Main Menu" type="Button" parent="."]
+offset_left = 203.0
+offset_top = 49.0
+offset_right = 275.0
+offset_bottom = 89.0
+icon = ExtResource("12_7a6cg")
+icon_alignment = 1
 
 [connection signal="mouse_entered" from="Brushing Teeth" to="." method="_on_brushing_teeth_mouse_entered"]
 [connection signal="mouse_exited" from="Brushing Teeth" to="." method="_on_brushing_teeth_mouse_exited"]
